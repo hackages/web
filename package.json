@@ -1,0 +1,27 @@
+{
+  "name": "web.iterators.io",
+  "version": "1.0.0",
+  "description": "Performance, Build tools and testing done right",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -w",
+    "start": "webpack-dev-server",
+    "build": "webpack -p",
+    "speedTest": "",
+    "psi": "psi iterators.be && psi iterators.io"
+  },
+  "author": "davy@iterators.io, davy@iterators.be",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.1.18",
+    "babel-register": "^6.2.0",
+    "psi": "^2.0.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "babel": "^6.1.18",
+    "express": "^4.13.3",
+    "psi": "^2.0.2"
+  }
+}
