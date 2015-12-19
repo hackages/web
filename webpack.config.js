@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
   devtool: 'source-map',
-  entry: './app.js',
+  entry: './www/app.js',
   output: {
     path: path.join(__dirname, 'www'),
     filanme: 'iterators',
