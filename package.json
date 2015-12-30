@@ -4,12 +4,19 @@
   "description": "Performance, Build tools and testing done right",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel/register -w",
+    "test": "eslint src && mocha --compilers js:babel/register -w",
     "coverage": "mocha -- --compilers js:babel/register",
     "docs": "esdoc -c esdoc.json",
     "start": "webpack-dev-server",
     "build": "webpack -p",
-    "psi": "psi iterators.be && psi iterators.io"
+    "psi": "psi iterators.be && psi iterators.io",
+    "lint": "eslint src tools && jscs src tools",
+    "csslint": "csscomb src/components --lint --verbose",
+    "clean": "babel-node tools/run clean",
+    "copy": "babel-node tools/run copy",
+    "bundle": "babel-node tools/run bundle",
+    "build": "babel-node tools/run build",
+    "deploy": "babel-node tools/run deploy"
   },
   "author": "davy@iterators.io, davy@iterators.be",
   "license": "MIT",
