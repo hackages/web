@@ -10,24 +10,17 @@
   "private": true,
   "version": "0.7.2",
   "dependencies": {
+    "Casper": "TryGhost/Casper#1.2.6",
     "ghost": "0.7.2",
     "ghost-s3-storage": "~0.2.2",
+    "ncp": "^2.0.0",
     "pg": "latest"
   },
   "engines": {
     "node": "~0.10.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "test": "grunt validate --verbose",
-    "server": "nodemon server",
-    "azure": "azure site log tail iterators",
-    "log": "rm -rf diagnostics.zip diagnostics && azure site log download iterators && open diagnostics.zip",
-    "build": "webpack",
-    "wpack": "webpack -w",
-    "dev": "npm run wpack && npm start",
-    "e2e": "protractor config",
-    "deploy": "surge -p public",
-    "booyaa": "npm run build && npm run deploy"
+    "postinstall": "ncp node_modules/Casper content/themes/casper",
+    "start": "node server.js"
   }
 }
