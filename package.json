@@ -1,0 +1,34 @@
+{
+  "name": "ghost-on-heroku",
+  "description": "Just a blogging platform on Heroku.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cobyism/ghost-on-heroku.git"
+  },
+  "bugs": "https://github.com/TryGhost/Ghost/issues",
+  "private": true,
+  "version": "0.7.2",
+  "dependencies": {
+    "ghost": "0.7.2",
+    "ghost-s3-storage": "~0.2.2",
+    "pg": "latest"
+  },
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "grunt validate --verbose",
+    "server": "nodemon server",
+    "azure": "azure site log tail jevisaugabon",
+    "log": "rm -rf diagnostics.zip diagnostics && azure site log download jevisaugabon && open diagnostics.zip",
+    "build": "webpack",
+    "wpack": "webpack -w",
+    "dev": "npm run wpack && npm start",
+    "e2e": "protractor config",
+    "deploy-test": "surge -p public -d admission-philos.surge.sh",
+    "deploy": "surge -p public",
+    "booyaa": "npm run build && npm run deploy"
+  }
+}
