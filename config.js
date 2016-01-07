@@ -26,7 +26,7 @@ config = {
 
   // Production (Heroku)
   production: {
-    url: process.env.ITERATORS_URL,
+    url: 'http://iterators.be',
     mail: {
       transport: 'SMTP',
       options: {
