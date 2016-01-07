@@ -21,13 +21,12 @@
     "start": "node server.js",
     "test": "grunt validate --verbose",
     "server": "nodemon server",
-    "azure": "azure site log tail jevisaugabon",
-    "log": "rm -rf diagnostics.zip diagnostics && azure site log download jevisaugabon && open diagnostics.zip",
+    "azure": "azure site log tail iterators",
+    "log": "rm -rf diagnostics.zip diagnostics && azure site log download iterators && open diagnostics.zip",
     "build": "webpack",
     "wpack": "webpack -w",
     "dev": "npm run wpack && npm start",
     "e2e": "protractor config",
-    "deploy-test": "surge -p public -d admission-philos.surge.sh",
     "deploy": "surge -p public",
     "booyaa": "npm run build && npm run deploy"
   }
