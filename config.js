@@ -26,7 +26,7 @@ config = {
 
   // Production (Heroku)
   production: {
-    url: 'http://iterators.be',
+    url: 'http://pullstream.com',
     mail: {
       transport: 'SMTP',
       options: {
