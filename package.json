@@ -1,0 +1,15 @@
+{
+  "name": "web.hackages.io",
+  "version": "1.0.0",
+  "description": "Website of hackages.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [],
+  "author": "007@hackages.io",
+  "license": "MIT"
+}
